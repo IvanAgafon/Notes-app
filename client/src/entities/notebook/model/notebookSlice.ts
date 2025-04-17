@@ -63,7 +63,7 @@ export const notebookSlice = createSlice({
         (notebook) => notebook.id !== action.payload
       );
     });
-    builder.addCase(deleteNotebook.rejected, (state, action) => {
+    builder.addCase(deleteNotebook.rejected, (_, action) => {
       console.error(action.error);
     });
 
